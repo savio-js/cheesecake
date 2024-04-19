@@ -1,0 +1,122 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+  --text: #a54328;
+  --white: #ffffff;
+
+  font-size: 62.5%; /* 10px */
+}
+
+body {
+  font-family: "Source Code Pro", sans-serif;
+  font-size: 1.5rem;
+  line-height: auto;
+
+  background: url(./assets/bg.svg);
+
+  color: var(--text);
+}
+
+main {
+  max-width: 32rem;
+
+  margin-inline: auto;
+
+  padding: 5.5rem 4rem;
+  box-sizing: content-box;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+
+  gap: 3.5rem;
+}
+
+.cheesecake {
+  display: flex;
+  flex-direction: column;
+}
+
+img {
+  width: 100%;
+  margin-block: 3.2rem;
+}
+
+h1,
+h2 {
+  /* clamp(min, ideal, alto) */
+  font-size: clamp(2.8rem, 2vw + 1rem, 4rem);
+  line-height: clamp(3.6rem, 2vw + 1rem, 5rem);
+}
+
+p,
+li,
+strong {
+  font-size: clamp(1.4rem, 1vw + 0.4rem, 2rem);
+  line-height: clamp(1.8rem, 1vw + 1rem, 2.5rem);
+}
+
+.mode {
+  display: flex;
+  flex-direction: column;
+}
+
+.mode strong {
+  padding-top: 2rem;
+}
+
+ul,
+ol {
+  padding-left: 2.5rem;
+}
+
+button {
+  width: 9.4rem;
+  height: 3.5rem;
+  background: var(--text);
+  color: var(--white);
+  border: none;
+  border-radius: 0.5rem;
+
+  text-align: center;
+
+  cursor: pointer;
+
+  margin-top: 3rem;
+}
+
+@media (min-width: 1120px) {
+  main{
+    flex-direction: row;
+    max-width: fit-content;
+    gap: 16rem;
+
+    padding: 9rem 6rem;
+
+  }
+  .cheesecake {
+    max-width: 43.5rem;
+  }
+
+  .mode {
+    max-width: 52.5rem;
+
+    
+  }
+
+  button {
+    padding: 1rem 2rem;
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+  }
+
+
+}
